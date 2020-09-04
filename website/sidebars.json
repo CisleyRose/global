@@ -1,7 +1,11 @@
 {
   "docs": {
     "Servicios": ["usuarios",
-	"perfiles"
+	"perfiles",
+	"producto",
+	"inventario",
+	"cliente",
+	"proveedor"
 	]
   },
   "docs-other": {
