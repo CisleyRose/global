@@ -1,7 +1,7 @@
 ---
 id: perfiles
-title: API perfiles
-sidebar_label: API perfiles
+title: API Perfiles
+sidebar_label: API Perfiles
 ---
 
 ## `Method GET` /getPerfiles
