@@ -6,7 +6,8 @@
 	"inventario",
 	"cliente",
 	"proveedor",
-	"almacen"
+	"almacen",
+	"compras"
 	]
   },
   "docs-other": {
