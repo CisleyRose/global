@@ -10,7 +10,8 @@
 	"compras",
 	"ventas",
 	"cancCompra",
-	"cancVenta"
+	"cancVenta",
+	"modoPago"
 	]
   },
   "docs-other": {
