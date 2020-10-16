@@ -12,7 +12,8 @@
 	"cancCompra",
 	"cancVenta",
 	"modoPago",
-	"cuentasBancarias"
+	"cuentasBancarias",
+	"devolucion"
 	]
   },
   "docs-other": {
