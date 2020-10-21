@@ -13,7 +13,8 @@
 	"cancVenta",
 	"modoPago",
 	"cuentasBancarias",
-	"devolucion"
+	"devolucion",
+	"asiento"
 	]
   },
   "docs-other": {
