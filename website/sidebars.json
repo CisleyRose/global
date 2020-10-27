@@ -14,7 +14,8 @@
 	"modoPago",
 	"cuentasBancarias",
 	"devolucion",
-	"asiento"
+	"asiento",
+	"factura"
 	]
   },
   "docs-other": {
