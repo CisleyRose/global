@@ -15,7 +15,9 @@
 	"cuentasBancarias",
 	"devolucion",
 	"asiento",
-	"factura"
+	"factura",
+	"notaDebito",
+	"notaCredito"
 	]
   },
   "docs-other": {
