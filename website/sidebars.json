@@ -16,9 +16,7 @@
 	"devolucion",
 	"asiento",
 	"factura",
-	"notaDebito",
-	"notaCredito",
-	"pedido"
+	"cotizacion"
 	]
   },
   "docs-other": {
