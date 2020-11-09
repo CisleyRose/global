@@ -17,7 +17,8 @@
 	"asiento",
 	"factura",
 	"notaDebito",
-	"notaCredito"
+	"notaCredito",
+	"pedido"
 	]
   },
   "docs-other": {
