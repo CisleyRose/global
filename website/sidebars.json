@@ -18,7 +18,9 @@
 	"factura",
 	"notaDebito",
 	"notaCredito",
-	"pedido"
+	"pedido",
+	"entradaInv",
+	"salidaInv"
 	]
   },
   "docs-other": {

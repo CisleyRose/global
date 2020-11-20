@@ -207,13 +207,13 @@ Crea o actualiza la información del Detalle de notas de credito de ventas.
 
 ```
 	{
-    "detNotaCreditoId": 3,
-    "articulo": "mesa",
-    "descripcio": "mesa",
-    "igvcs": 1,
-    "montobase": 50.0,
-    "notadcv": "credito"
-}
+		"detNotaCreditoId": 3,
+		"articulo": "mesa",
+		"descripcio": "mesa",
+		"igvcs": 1,
+		"montobase": 50.0,
+		"notadcv": "credito"
+	}
 
 ```
 ## `Method DELETE` /deleteDetNotaCredito/{idDetNotaCredito}
