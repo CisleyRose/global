@@ -4,7 +4,7 @@ title: API Cancelacion Compra
 sidebar_label: API Cancelacion Compra
 ---
 
-## `Method GET` /getCancCompraList
+## `Method GET` /cance-compras
 **Obtiene el listado de cancelaciones de compras**
 
 Obtiene el listado de las cancelaciones de compras realizadas en la empresa
@@ -16,36 +16,83 @@ Obtiene el listado de las cancelaciones de compras realizadas en la empresa
 [
     {
         "cancCompraId": 1,
-        "dateMod": "2020-09-28T00:00:00.000+00:00",
-        "estado": "v",
-        "fecha": "2020-09-28T00:00:00.000+00:00",
-        "lantcanc": "0",
-        "lanticipo": "0",
+        "cambio": 15478,
+        "cancc": 1254,
+        "dateMod": "2021-05-26T00:00:00.000+00:00",
+        "estado": 1,
+        "fecha": "2021-05-26T00:00:00.000+00:00",
+        "lantcanc": 1,
+        "lanticipo": 1,
         "moneda": "us",
-        "notas": "nota1",
+        "notas": "sin notas",
         "proveedor": "global",
-        "saldoant": "quinientos",
-        "timeMod": "2020-09-28T00:00:00.000+00:00",
-        "whoMod": "258741"
+        "saldoant": 152.266,
+        "timeMod": "1:42:00",
+        "whoMod": "1547"
     },
     {
         "cancCompraId": 2,
-        "dateMod": "2020-09-28T00:00:00.000+00:00",
-        "estado": "v",
-        "fecha": "2020-09-28T00:00:00.000+00:00",
-        "lantcanc": "0",
-        "lanticipo": "0",
+        "cambio": 15478,
+        "cancc": 1254,
+        "dateMod": "2021-05-26T00:00:00.000+00:00",
+        "estado": 1,
+        "fecha": "2021-05-26T00:00:00.000+00:00",
+        "lantcanc": 1,
+        "lanticipo": 1,
         "moneda": "us",
-        "notas": "nota2",
-        "proveedor": "global",
-        "saldoant": "trecientos",
-        "timeMod": "2020-09-28T00:00:00.000+00:00",
-        "whoMod": "258741"
+        "notas": "sin notas",
+        "proveedor": "yaru",
+        "saldoant": 152.266,
+        "timeMod": "1:42:00",
+        "whoMod": "1547"
+    },
+    {
+        "cancCompraId": 3,
+        "cambio": 15478,
+        "cancc": 1254,
+        "dateMod": "2021-05-26T00:00:00.000+00:00",
+        "estado": 1,
+        "fecha": "2021-05-26T00:00:00.000+00:00",
+        "lantcanc": 1,
+        "lanticipo": 1,
+        "moneda": "us",
+        "notas": "sin notas",
+        "proveedor": "global2",
+        "saldoant": 152.266,
+        "timeMod": "1:42:00",
+        "whoMod": "1547"
     }
 ]
 ```
 
-## `Method POST` /saveCancCompra
+## `Method GET` /cance-compras/{idCancCompra}
+**Obtiene una cancelacion de compra especifica según el id indicado**
+
+Obtiene una cancelacion de compra especifica según el id indicado
+
+**Example Output**
+
+
+```
+	{
+		"cancCompraId": 3,
+		"cambio": 15478,
+		"cancc": 1254,
+		"dateMod": "2021-05-26T00:00:00.000+00:00",
+		"estado": 1,
+		"fecha": "2021-05-26T00:00:00.000+00:00",
+		"lantcanc": 1,
+		"lanticipo": 1,
+		"moneda": "us",
+		"notas": "sin notas",
+		"proveedor": "global2",
+		"saldoant": 152.266,
+		"timeMod": "1:42:00",
+		"whoMod": "1547"
+	}
+```
+
+## `Method POST` /cance-compras
 **Crea una cancelación de compra**
 
 Crea la información de la Cancelación de compra indicada.
@@ -54,43 +101,32 @@ Crea la información de la Cancelación de compra indicada.
 
 ```
 	
-     {
-        "cancCompraId": null,
-        "dateMod": "2020-09-28",
-        "estado": "v",
-        "fecha": "2020-09-28",
-        "lantcanc": "0",
-        "lanticipo": "0",
-        "moneda": "us",
-        "notas": "nota2",
-        "proveedor": "global",
-        "saldoant": "trecientos",
-        "timeMod": "2020-09-28",
-        "whoMod": "258741"
-    }
+    {
+		"cancCompraId": null,
+		"cambio": 15478,
+		"cancc": 1254,
+		"dateMod": "2021-06-03",
+		"estado": 1,
+		"fecha": "2021-06-03",
+		"lantcanc": 1,
+		"lanticipo": 1,
+		"moneda": "us",
+		"notas": "sin notas",
+		"proveedor": "global2",
+		"saldoant": 152.266,
+		"timeMod": "1:42:00",
+		"whoMod": "1547"
+	}
 
 ```
 
 **Example Output**
 
 ```
-	{
-		"cancCompraId": 6,
-		"dateMod": "2020-09-28T00:00:00.000+00:00",
-		"estado": "v",
-		"fecha": "2020-09-28T00:00:00.000+00:00",
-		"lantcanc": "0",
-		"lanticipo": "0",
-		"moneda": "us",
-		"notas": "nota2",
-		"proveedor": "global",
-		"saldoant": "trecientos",
-		"timeMod": "2020-09-28T00:00:00.000+00:00",
-		"whoMod": "258741"
-	}
+[201 OK]
 
 ```
-## `Method DELETE` /deleteCancCompra/{idCancCompra}
+## `Method DELETE` /cance-compras/{idCancCompra}
 **Elimina una cancelacion de compra**
 
 Elimina la información de la cancelacion de compra indicada
@@ -98,5 +134,9 @@ Elimina la información de la cancelacion de compra indicada
 **Example Output**
 
 ```
-[200 OK]
+	{
+		"codRespuesta": 200,
+		"msgRespuesta": "OK",
+		"content": null
+	}
 ```

@@ -4,7 +4,7 @@ title: API Cancelacion Venta
 sidebar_label: API Cancelacion Venta
 ---
 
-## `Method GET` /getCancVentaList
+## `Method GET` /cance-ventas
 **Obtiene el listado de cancelaciones de ventas**
 
 Obtiene el listado de las cancelaciones de ventas realizadas en la empresa
@@ -16,59 +16,91 @@ Obtiene el listado de las cancelaciones de ventas realizadas en la empresa
 [
     {
         "cancVentaId": 1,
-        "cancv": "159632",
+        "cambio": 15478,
+        "cancv": 1254,
         "cliente": "global",
-        "dateMod": "2020-09-28T00:00:00.000+00:00",
-        "estado": "v",
-        "fecha": "2020-09-28T00:00:00.000+00:00",
-        "lantcanc": "1",
-        "lanticipo": "1",
+        "dateMod": "2021-05-26T00:00:00.000+00:00",
+        "estado": 1,
+        "fecha": "2021-05-26T00:00:00.000+00:00",
+        "lantcanc": 1,
+        "lanticipo": 1,
         "moneda": "us",
-        "notas": "nota1",
-        "pdolar": "14587",
-        "ppedido": "pedido1",
-        "saldoant": "159632",
-        "timeMod": "2020-09-28T00:00:00.000+00:00",
-        "whoMod": "158742"
+        "notas": "sin notas",
+        "pdolar": 1589,
+        "ppedido": 15896,
+        "saldoant": 1587,
+        "timeMod": "1:42:00",
+        "whoMod": "158"
     },
     {
         "cancVentaId": 2,
-        "cancv": "159632",
-        "cliente": "global",
-        "dateMod": "2020-09-28T00:00:00.000+00:00",
-        "estado": "v",
-        "fecha": "2020-09-28T00:00:00.000+00:00",
-        "lantcanc": "1",
-        "lanticipo": "1",
+        "cambio": 15478,
+        "cancv": 1254,
+        "cliente": "yaru",
+        "dateMod": "2021-05-26T00:00:00.000+00:00",
+        "estado": 1,
+        "fecha": "2021-05-26T00:00:00.000+00:00",
+        "lantcanc": 1,
+        "lanticipo": 1,
         "moneda": "us",
-        "notas": "nota1",
-        "pdolar": "14587",
-        "ppedido": "pedido1",
-        "saldoant": "159632",
-        "timeMod": "2020-09-28T00:00:00.000+00:00",
-        "whoMod": "158742"
+        "notas": "sin notas",
+        "pdolar": 1589,
+        "ppedido": 15896,
+        "saldoant": 1587,
+        "timeMod": "1:42:00",
+        "whoMod": "158"
     },
     {
         "cancVentaId": 3,
-        "cancv": "159632",
-        "cliente": "global",
-        "dateMod": "2020-09-28T00:00:00.000+00:00",
-        "estado": "v",
-        "fecha": "2020-09-28T00:00:00.000+00:00",
-        "lantcanc": "1",
-        "lanticipo": "1",
+        "cambio": 15478,
+        "cancv": 1254,
+        "cliente": "yaru",
+        "dateMod": "2021-05-26T00:00:00.000+00:00",
+        "estado": 1,
+        "fecha": "2021-05-26T00:00:00.000+00:00",
+        "lantcanc": 1,
+        "lanticipo": 1,
         "moneda": "us",
-        "notas": "nota1",
-        "pdolar": "14587",
-        "ppedido": "pedido1",
-        "saldoant": "159632",
-        "timeMod": "2020-09-28T00:00:00.000+00:00",
-        "whoMod": "158742"
+        "notas": "sin notas",
+        "pdolar": 1589,
+        "ppedido": 15896,
+        "saldoant": 1587,
+        "timeMod": "1:42:00",
+        "whoMod": "158"
     }
 ]
 ```
 
-## `Method POST` /saveCancVenta
+## `Method GET` /cance-ventas/{idCancVenta}
+**Obtiene una cancelacion de venta especifica según el id indicado**
+
+Obtiene una cancelacion de venta especifica según el id indicado
+
+**Example Output**
+
+
+```
+	{
+		"cancVentaId": 3,
+		"cambio": 15478,
+		"cancv": 1254,
+		"cliente": "yaru",
+		"dateMod": "2021-05-26T00:00:00.000+00:00",
+		"estado": 1,
+		"fecha": "2021-05-26T00:00:00.000+00:00",
+		"lantcanc": 1,
+		"lanticipo": 1,
+		"moneda": "us",
+		"notas": "sin notas",
+		"pdolar": 1589,
+		"ppedido": 15896,
+		"saldoant": 1587,
+		"timeMod": "1:42:00",
+		"whoMod": "158"
+	}
+```
+
+## `Method POST` /cance-ventas
 **Crea una cancelación de venta**
 
 Crea la información de la Cancelación de venta indicada.
@@ -77,49 +109,34 @@ Crea la información de la Cancelación de venta indicada.
 
 ```
 	
-     {
-        "cancVentaId": null,
-        "cancv": "159632",
-        "cliente": "global",
-        "dateMod": "2020-09-28",
-        "estado": "v",
-        "fecha": "2020-09-28",
-        "lantcanc": "1",
-        "lanticipo": "1",
-        "moneda": "us",
-        "notas": "nota1",
-        "pdolar": "14587",
-        "ppedido": "pedido1",
-        "saldoant": "159632",
-        "timeMod": "2020-09-28",
-        "whoMod": "158742"
-    }
+    {
+		"cancVentaId": null,
+		"cambio": 15478,
+		"cancv": 1254,
+		"cliente": "yaru",
+		"dateMod": "2021-05-26",
+		"estado": 1,
+		"fecha": "2021-05-26",
+		"lantcanc": 1,
+		"lanticipo": 1,
+		"moneda": "us",
+		"notas": "sin notas",
+		"pdolar": 1589,
+		"ppedido": 15896,
+		"saldoant": 1587,
+		"timeMod": "1:42:00",
+		"whoMod": "158"
+	}
 
 ```
 
 **Example Output**
 
 ```
-	{
-		"cancVentaId": 6,
-		"cancv": "159632",
-		"cliente": "global",
-		"dateMod": "2020-09-28T00:00:00.000+00:00",
-		"estado": "v",
-		"fecha": "2020-09-28T00:00:00.000+00:00",
-		"lantcanc": "1",
-		"lanticipo": "1",
-		"moneda": "us",
-		"notas": "nota1",
-		"pdolar": "14587",
-		"ppedido": "pedido1",
-		"saldoant": "159632",
-		"timeMod": "2020-09-28T00:00:00.000+00:00",
-		"whoMod": "158742"
-	}
+[201 OK]
 
 ```
-## `Method DELETE` /deleteCancVenta/{idCancVenta}
+## `Method DELETE` /cance-ventas/{idCancVenta}
 **Elimina una cancelacion de venta**
 
 Elimina la información de la cancelacion de venta indicada
@@ -127,5 +144,9 @@ Elimina la información de la cancelacion de venta indicada
 **Example Output**
 
 ```
-[200 OK]
+	{
+		"codRespuesta": 200,
+		"msgRespuesta": "OK",
+		"content": null
+	}
 ```

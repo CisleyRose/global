@@ -4,7 +4,7 @@ title: API Inventario
 sidebar_label: API Inventario
 ---
 
-## `Method GET` /getInventarioList
+## `Method GET` /inventarios
 **Consulta el listado en la tabla Inventario**
 
 Obtiene la información existente en Inventario
@@ -15,46 +15,72 @@ Obtiene la información existente en Inventario
 ```
 [
     {
+        "inventarId": 1,
+        "ajustado": 1,
+        "almacen": "alm",
+        "articulo": "jabon",
+        "cantMax": 159,
+        "cantMin": 1,
+        "stock": 100,
+        "cantidad": 100,
+        "inventario": "Inventario 1\n",
+        "invFisico": 1,
+        "invXAlm": "1"
+    },
+    {
+        "inventarId": 2,
+        "ajustado": 1,
+        "almacen": "alm",
+        "articulo": "shampoo",
+        "cantMax": 159,
+        "cantMin": 1,
+        "stock": 100,
+        "cantidad": 100,
+        "inventario": "Inventario 1",
+        "invFisico": 1,
+        "invXAlm": "1"
+    },
+    {
         "inventarId": 3,
-        "ajustado": "C",
-        "almacen": "RPC",
-        "articulo": "HIGIENE",
-        "cantMax": "23",
-        "cantMin": "12",
-        "existencia": "12",
-        "inventario": "12",
-        "invFisico": "12",
-        "invXAlm": "12"
-    },
-    {
-        "inventarId": 4,
-        "ajustado": "A",
-        "almacen": "RPC",
-        "articulo": "HIGIENE",
-        "cantMax": "23",
-        "cantMin": "12",
-        "existencia": "12",
-        "inventario": "12",
-        "invFisico": "12",
-        "invXAlm": "12"
-    },
-    {
-        "inventarId": 5,
-        "ajustado": "F",
-        "almacen": "RPC",
-        "articulo": "HIGIENE",
-        "cantMax": "23",
-        "cantMin": "12",
-        "existencia": "12",
-        "inventario": "12",
-        "invFisico": "12",
-        "invXAlm": "12"
+        "ajustado": 1,
+        "almacen": "alm",
+        "articulo": "acondicionador",
+        "cantMax": 159,
+        "cantMin": 1,
+        "stock": 100,
+        "cantidad": 100,
+        "inventario": "Inventario 1",
+        "invFisico": 1,
+        "invXAlm": "1"
     }
 ]
-
 ```
 
-## `Method POST` /saveInventario
+## `Method GET` /inventarios/{idInventario}
+**Obtiene un inventario especifico según el id indicado**
+
+Obtiene un inventario especifico según el id indicado
+
+**Example Output**
+
+
+```
+	{
+		"inventarId": 2,
+		"ajustado": 1,
+		"almacen": "alm",
+		"articulo": "shampoo",
+		"cantMax": 159,
+		"cantMin": 1,
+		"stock": 100,
+		"cantidad": 100,
+		"inventario": "Inventario 1",
+		"invFisico": 1,
+		"invXAlm": "1"
+	}
+```
+
+## `Method POST` /inventarios
 **Crea o actualiza la información en la tabla Inventario**
 
 Crea o actualiza la información en la tabla Inventario.
@@ -63,38 +89,28 @@ Crea o actualiza la información en la tabla Inventario.
 
 ```	    
     {
-        "inventarId": null,
-        "ajustado": "F",
-        "almacen": "RPC",
-        "articulo": "HIGIENE",
-        "cantMax": "23",
-        "cantMin": "12",
-        "existencia": "12",
-        "inventario": "12",
-        "invFisico": "12",
-        "invXAlm": "12"
-    }
+		"inventarId": null,
+		"ajustado": 1,
+		"almacen": "alm",
+		"articulo": "acondicionar",
+		"cantMax": 159,
+		"cantMin": 1,
+		"stock": 100,
+		"cantidad": 100,
+		"inventario": "Inventario 1",
+		"invFisico": 1,
+		"invXAlm": "1"
+	}
 
 ```
 
 **Example Output**
 
 ```
-	{
-    "inventarId": 5,
-    "ajustado": "F",
-    "almacen": "RPC",
-    "articulo": "HIGIENE",
-    "cantMax": "23",
-    "cantMin": "12",
-    "existencia": "12",
-    "inventario": "12",
-    "invFisico": "12",
-    "invXAlm": "12"
-}
-
+[201 OK]
 ```
-## `Method DELETE` /deleteInventario/{idInventario}
+
+## `Method DELETE` /inventarios/{idInventario}
 **Elimina un registro de la tabla Inventario**
 
 Elimina la información del registro indicado por su id
@@ -102,5 +118,9 @@ Elimina la información del registro indicado por su id
 **Example Output**
 
 ```
-[200 OK]
+	{
+		"codRespuesta": 200,
+		"msgRespuesta": "OK",
+		"content": null
+	}
 ```

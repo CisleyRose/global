@@ -4,7 +4,7 @@ title: API Devolucion
 sidebar_label: API Devolucion
 ---
 
-## `Method GET` /getEncDevolList
+## `Method GET` /enc-devoluciones
 **Obtiene el encabezado de devoluciones de compra y devoluciones de venta**
 
 Obtiene la información del encabezado de devoluciones de compra y devoluciones de venta
@@ -63,7 +63,42 @@ Obtiene la información del encabezado de devoluciones de compra y devoluciones 
 ]
 ```
 
-## `Method POST` /saveEncDevol
+## `Method GET` /enc-devoluciones/{idEncDevol}
+**Obtiene un encabezado de devolucion de compra y devolucion de venta especifico según el id indicado**
+
+Obtiene un encabezado de devolucion de compra y devolucion de venta especifico según el id indicado
+
+**Example Output**
+
+
+```
+    {
+        "encDevolId": 3,
+        "cambio": 1,
+        "compra": "producto",
+        "dateMod": "2020-10-16T00:00:00.000+00:00",
+        "devComp": 12,
+        "docasoc": 1,
+        "entrada": 1,
+        "estado": 1,
+        "factura": "compra",
+        "fecha": "2020-10-16T00:00:00.000+00:00",
+        "moneda": "us",
+        "motivo": "compra",
+        "proveedor": "global",
+        "timeMod": "16102020",
+        "whoMod": "15982",
+        "tipo": "compra",
+        "cancv": 0,
+        "devVent": 0,
+        "notadcv1": null,
+        "notadcv2": null,
+        "salida": 0
+    }
+
+```
+
+## `Method POST` /enc-devoluciones
 **Crea o actualiza la información del encabezado de devoluciones de compra y de devoluciones de venta**
 
 Crea o actualiza la información del encabezado de devoluciones de compra y de devoluciones de venta especificado.
@@ -101,32 +136,9 @@ Crea o actualiza la información del encabezado de devoluciones de compra y de d
 **Example Output**
 
 ```
-	{
-		"encDevolId": 3,
-		"cambio": 1,
-		"compra": "producto",
-		"dateMod": "2020-10-16T00:00:00.000+00:00",
-		"devComp": 12,
-		"docasoc": 1,
-		"entrada": 1,
-		"estado": 1,
-		"factura": "compra",
-		"fecha": "2020-10-16T00:00:00.000+00:00",
-		"moneda": "us",
-		"motivo": "compra",
-		"proveedor": "global",
-		"timeMod": "16102020",
-		"whoMod": "15982",
-		"tipo": "compra",
-		"cancv": 0,
-		"devVent": 0,
-		"notadcv1": null,
-		"notadcv2": null,
-		"salida": 0
-	}
-
+[201 OK]
 ```
-## `Method DELETE` /deleteEncDevol/{idEncDevol}
+## `Method DELETE` /enc-devoluciones/{idEncDevol}
 **Elimina un registro del encabezado de devoluciones de compra y devoluciones de venta**
 
 Elimina la información del encabezado de devoluciones de compra y devoluciones de venta especificado
@@ -134,10 +146,14 @@ Elimina la información del encabezado de devoluciones de compra y devoluciones 
 **Example Output**
 
 ```
-[200 OK]
+	{
+		"codRespuesta": 200,
+		"msgRespuesta": "OK",
+		"content": null
+	}
 ```
 
-## `Method GET` /getDetDevolList
+## `Method GET` /det-devoluciones
 **Obtiene el listado de detalles de las devoluciones de compra y de las devoluciones de venta**
 
 Obtiene la información del detalle de las devoluciones de compra y de las devoluciones de venta
@@ -174,7 +190,31 @@ Obtiene la información del detalle de las devoluciones de compra y de las devol
 ]
 ```
 
-## `Method POST` /saveDetDevol
+## `Method GET` /det-devoluciones/{idDetDevol}
+**Obtiene un detalle de devolucion de compra y de devolucion de venta especifico según el id indicado**
+
+Obtiene un detalle de devolucion de compra y de devolucion de venta especifico según el id indicado
+
+**Example Output**
+
+
+```
+    {
+        "detDevolId": 3,
+        "almacen": "com",
+        "cantidad": 1,
+        "devComp": 1,
+        "itemComp": 1,
+        "otroCosto": 12.0,
+        "precio": 12.0,
+        "tipo": "compra",
+        "devVent": 0,
+        "itemVent": 0
+    }
+
+```
+
+## `Method POST` /det-devoluciones
 **Crea o actualiza la información del detalle de devoluciones de compra y de devoluciones de venta**
 
 Crea o actualiza la información del Detalle de devoluciones de compra y de devoluciones de venta especificada.
@@ -201,21 +241,10 @@ Crea o actualiza la información del Detalle de devoluciones de compra y de devo
 **Example Output**
 
 ```
-	{
-		"detDevolId": 3,
-		"almacen": "com",
-		"cantidad": 1,
-		"devComp": 1,
-		"itemComp": 1,
-		"otroCosto": 12.0,
-		"precio": 12.0,
-		"tipo": "compra",
-		"devVent": 0,
-		"itemVent": 0
-	}
+[201 OK]
 
 ```
-## `Method DELETE` /deleteDetDevol/{idDetDevol}
+## `Method DELETE` /det-devoluciones/{idDetDevol}
 **Elimina un registro del detalle de devoluciones de compra y devoluciones de venta**
 
 Elimina la información del detalle de devoluciones de compra y devoluciones de venta especificado
@@ -223,5 +252,9 @@ Elimina la información del detalle de devoluciones de compra y devoluciones de 
 **Example Output**
 
 ```
-[200 OK]
+	{
+		"codRespuesta": 200,
+		"msgRespuesta": "OK",
+		"content": null
+	}
 ```

@@ -4,7 +4,7 @@ title: API Usuarios
 sidebar_label: API Usuarios
 ---
 
-## `Method GET` /getUsuarios
+## `Method GET` /usuarios
 **Consulta el listado de Usuarios**
 
 Obtiene la descripcion de los usuarios creados
@@ -16,37 +16,72 @@ Obtiene la descripcion de los usuarios creados
 [
     {
         "userId": 1,
-        "username": "Prueba",
-        "usernameFull": "Prueba Global",
-        "password": "$2a$10$MPcBLMO.6NPGB1DwVcn7NuypqXy7MZECQmf5Zd3HOAzn1EfmajZx.",
-        "phone": 5689568745411,
-        "connectionLast": "2020-07-22T00:00:00.000+00:00",
-        "perfil": {
-            "perfilId": 1,
-            "rolDescription": "USER",
-            "active": true
-        },
+        "username": "global",
+        "usernameFull": "global",
+        "password": "$2a$10$2b1AsHTRY1JW860IXm5bKuI3YSFwON9tkdhLSzKHK2weKWOZ9rOqO",
+        "phone": 12345600,
+        "connectionLast": "2021-06-03T18:49:29.653+00:00",
+        "perfilId": 1,
         "active": true
     },
-	{
+    {
         "userId": 2,
-        "username": "Prueba2",
-        "usernameFull": "Prueba Global",
-        "password": "$2a$10$MPcBLMO.6NPGB1DwVcn7NuypqXy7MZECQmf5Zd3HOAzn1EfmajZx.",
-        "phone": 5689568745411,
-        "connectionLast": "2020-07-22T00:00:00.000+00:00",
-        "perfil": {
-            "perfilId": 2,
-            "rolDescription": "ADMIN",
-            "active": true
-        },
+        "username": "yaruby",
+        "usernameFull": "yaruby1",
+        "password": "$2a$10$2b1AsHTRY1JW860IXm5bKuI3YSFwON9tkdhLSzKHK2weKWOZ9rOqO",
+        "phone": 12345600,
+        "connectionLast": "2021-05-28T00:00:00.000+00:00",
+        "perfilId": 2,
         "active": true
     }
 ]
 
 ```
 
-## `Method POST` /saveUsuario
+## `Method GET` /usuarios/usuario/{username}
+**Obtiene un usuario especifico por el username indicado**
+
+Obtiene un usuario especifico por el username indicado
+
+**Example Output**
+
+
+```
+	{
+		"userId": 2,
+		"username": "yaruby",
+		"usernameFull": "yaruby1",
+		"password": "$2a$10$2b1AsHTRY1JW860IXm5bKuI3YSFwON9tkdhLSzKHK2weKWOZ9rOqO",
+		"phone": 12345600,
+		"connectionLast": "2021-05-28T00:00:00.000+00:00",
+		"perfilId": 2,
+		"active": true
+	}
+```
+
+## `Method GET` /usuarios/{idUsuario}
+**Obtiene un usuario especifico según el id indicado**
+
+Obtiene un usuario especifico según el id indicado
+
+**Example Output**
+
+
+```
+	{
+        "userId": 2,
+        "username": "yaruby",
+        "usernameFull": "yaruby1",
+        "password": "$2a$10$2b1AsHTRY1JW860IXm5bKuI3YSFwON9tkdhLSzKHK2weKWOZ9rOqO",
+        "phone": 12345600,
+        "connectionLast": "2021-05-28T00:00:00.000+00:00",
+        "perfilId": 2,
+        "active": true
+    }
+```
+
+
+## `Method POST` /usuarios
 **Registra usuario**
 
 Crea o actualiza la información del usuario.
@@ -56,16 +91,12 @@ Crea o actualiza la información del usuario.
 ```
 	{
         "userId": null,
-        "username": "Global",
-        "usernameFull": "Prueba Global",
-        "password": "12345",
-        "phone": "5689568745411",
-        "connectionLast": "2020-07-22T00:00:00.000+00:00",
-        "perfil": {
-            "perfilId": 5,
-            "rolDescription": "ADMINISTRADOR",
-            "active": true
-        },
+        "username": "global4",
+        "usernameFull": "globalfull4",
+        "password": "$2a$10$2b1AsHTRY1JW860IXm5bKuI3YSFwON9tkdhLSzKHK2weKWOZ9rOqO",
+        "phone": 12345600,
+        "connectionLast": "2021-05-28",
+        "perfilId": 5,
         "active": true
     }
 
@@ -74,23 +105,10 @@ Crea o actualiza la información del usuario.
 **Example Output**
 
 ```
-	{
-		"userId": 11,
-		"username": "Global2",
-		"usernameFull": "Prueba Global",
-		"password": "$2a$10$0YP6vHWYpHLPan3LQBEG5epQGuvk/R6LNSHuw3mwaZjLrSsX.Gmvm",
-		"phone": 5689568745411,
-		"connectionLast": "2020-07-22T00:00:00.000+00:00",
-		"perfil": {
-			"perfilId": 6,
-			"rolDescription": "administrador",
-			"active": true
-		},
-		"active": true
-    }
-
+[201 OK]
 ```
-## `Method DELETE` /deleteUsuario/{idUsuario}
+
+## `Method DELETE` /usuarios/{idUsuario}
 **Elimina Usuario**
 
 Elimina un registro específico por su id
@@ -98,5 +116,9 @@ Elimina un registro específico por su id
 **Example Output**
 
 ```
-[200 OK]
+	{
+		"codRespuesta": 200,
+		"msgRespuesta": "OK",
+		"content": null
+	}
 ```

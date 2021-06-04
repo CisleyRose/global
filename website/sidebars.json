@@ -20,7 +20,8 @@
 	"notaCredito",
 	"pedido",
 	"entradaInv",
-	"salidaInv"
+	"salidaInv",
+	"catalogo"
 	]
   },
   "docs-other": {

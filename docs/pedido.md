@@ -4,7 +4,7 @@ title: API Pedidos
 sidebar_label: API Pedidos
 ---
 
-## `Method GET` /getEncPedidoList
+## `Method GET` /enc-pedidos
 **Obtiene el encabezado de pedidos**
 
 Obtiene la información del encabezado de pedidos
@@ -43,7 +43,32 @@ Obtiene la información del encabezado de pedidos
 ]
 ```
 
-## `Method POST` /saveEncPedido
+## `Method GET` /enc-pedidos/{idEncPedido}
+**Obtiene un encabezado de pedidos especifico según el id indicado**
+
+Obtiene un encabezado de pedidos especifico según el id indicado
+
+**Example Output**
+
+
+```
+    {
+        "encPedidoId": 3,
+        "cambio": 14,
+        "cliente": "global",
+        "dateMod": "2020-11-09T00:00:00.000+00:00",
+        "estado": 1,
+        "fecha": "2020-11-09T00:00:00.000+00:00",
+        "moneda": "us",
+        "notas": "sin notas",
+        "pedidos": 1,
+        "timeMod": "2:29:00",
+        "whoMod": "12365"
+    }
+
+```
+
+## `Method POST` /enc-pedidos
 **Crea o actualiza la información del encabezado de pedidos**
 
 Crea o actualiza la información del encabezado de pedidos especificado.
@@ -71,22 +96,10 @@ Crea o actualiza la información del encabezado de pedidos especificado.
 **Example Output**
 
 ```
-	{
-		"encPedidoId": 3,
-		"cambio": 14,
-		"cliente": "global",
-		"dateMod": "2020-11-09T00:00:00.000+00:00",
-		"estado": 1,
-		"fecha": "2020-11-09T00:00:00.000+00:00",
-		"moneda": "us",
-		"notas": "sin notas",
-		"pedidos": 1,
-		"timeMod": "2:29:00",
-		"whoMod": "12365"
-	}
-
+[201 OK]
 ```
-## `Method DELETE` /deleteEncPedido/{idEncPedido}
+
+## `Method DELETE` /enc-pedidos/{idEncPedido}
 **Elimina un registro del encabezado de los pedidos**
 
 Elimina la información del encabezado de  pedidos especificado
@@ -94,10 +107,14 @@ Elimina la información del encabezado de  pedidos especificado
 **Example Output**
 
 ```
-[200 OK]
+	{
+		"codRespuesta": 200,
+		"msgRespuesta": "OK",
+		"content": null
+	}
 ```
 
-## `Method GET` /getDetPedidoList
+## `Method GET` /det-pedidos
 **Obtiene el listado de detalles de pedidos**
 
 Obtiene la información del detalle de pedidos
@@ -142,7 +159,35 @@ Obtiene la información del detalle de pedidos
 ]
 ```
 
-## `Method POST` /saveDetPedido
+## `Method GET` /det-pedidos/{idDetPedido}
+**Obtiene un detalle de pedidos especifico según el id indicado**
+
+Obtiene un detalle de pedidos especifico según el id indicado
+
+**Example Output**
+
+
+```
+    {
+        "detPedidoId": 3,
+        "articulo": "camisa",
+        "cantidad": 1,
+        "descMonto": 12,
+        "descripcio": "camisa",
+        "descuento": 0,
+        "facturado": 1,
+        "igvcs": 1,
+        "item": 1,
+        "itemDoc": "camisa",
+        "numPrecio": 120,
+        "pedido": 1,
+        "precio": 120,
+        "urgencia": 1
+    }
+
+```
+
+## `Method POST` /det-pedidos
 **Crea o actualiza la información del detalle de pedidos**
 
 Crea o actualiza la información del detalle de pedidos especificado.
@@ -173,25 +218,10 @@ Crea o actualiza la información del detalle de pedidos especificado.
 **Example Output**
 
 ```
-	{
-		"detPedidoId": 3,
-		"articulo": "camisa",
-		"cantidad": 1,
-		"descMonto": 12,
-		"descripcio": "camisa",
-		"descuento": 0,
-		"facturado": 1,
-		"igvcs": 1,
-		"item": 1,
-		"itemDoc": "camisa",
-		"numPrecio": 120,
-		"pedido": 1,
-		"precio": 120,
-		"urgencia": 1
-	}
-
+[201 OK]
 ```
-## `Method DELETE` /deleteDetPedido/{idDetPedido}
+
+## `Method DELETE` /det-pedidos/{idDetPedido}
 **Elimina un registro del detalle de los pedidos**
 
 Elimina la información del detalle del pedido especificado
@@ -199,5 +229,9 @@ Elimina la información del detalle del pedido especificado
 **Example Output**
 
 ```
-[200 OK]
+	{
+		"codRespuesta": 200,
+		"msgRespuesta": "OK",
+		"content": null
+	}
 ```
