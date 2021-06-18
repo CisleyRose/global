@@ -1,28 +1,33 @@
 {
   "docs": {
     "Servicios": ["usuarios",
-	"perfiles",
-	"producto",
-	"inventario",
-	"cliente",
-	"proveedor",
-	"almacen",
-	"compras",
-	"ventas",
-	"cancCompra",
-	"cancVenta",
-	"modoPago",
-	"cuentasBancarias",
-	"devolucion",
-	"asiento",
-	"factura",
-	"notaDebito",
-	"notaCredito",
-	"pedido",
-	"entradaInv",
-	"salidaInv",
-	"catalogo"
+		"perfiles",
+		"producto",
+		"inventario",
+		"cliente",
+		"proveedor",
+		"almacen",
+		"compras",
+		"ventas",
+		"cancCompra",
+		"cancVenta",
+		"modoPago",
+		"cuentasBancarias",
+		"devolucion",
+		"asiento",
+		"factura",
+		"notaDebito",
+		"notaCredito",
+		"pedido",
+		"entradaInv",
+		"salidaInv",
+		"catalogo"	
 	]
+  }, 
+  "dictionary": {
+	  "Diccionario de Datos": [
+		"tabla-catalogos"
+	  ]
   },
   "docs-other": {
     "First Category": ["doc4", "doc5"]
